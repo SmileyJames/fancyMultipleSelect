@@ -1,0 +1,128 @@
+//Media query mixin
+@mixin media($breakpoint)
+{
+    @media all and (max-width: $breakpoint) 
+    {
+        @content;
+    }
+}
+
+$highlight-colour: rgb(20, 255, 20);
+$light-colour: rgb(255, 255, 255);
+$medium-colour: rgb(150, 150, 150);
+$dark-colour: rgb(0, 0, 0);
+
+$corner-radius: 3px;
+$padding: 0.3em 0.5em;
+
+.multiple-select
+{
+    width: 100%;
+    max-width: 400px;
+    margin-top: 0.5em;
+    margin-bottom: 0.3em;
+    box-sizing: border-box;
+}
+
+.item-holder
+{
+    max-height: 200px;
+    max-height: 30vh;
+    overflow-y: auto;
+    border: solid 1px $medium-colour;
+    border-radius: $corner-radius $corner-radius 0px 0px;
+    box-sizing: border-box;
+}
+
+.item
+{
+    width: 100%;
+    padding: $padding;
+    border-top: solid 1px $medium-colour;
+    transition: background-image 0.15s linear;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6h-6v-2h6v-6h2v6h6v2z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>') no-repeat center right 0.4em;
+    background-size: 1em 1em;
+    user-select: none;
+    box-sizing: border-box;
+
+    &:first-child
+    {
+        border-top: none;
+    }
+
+    &:hover
+    {
+        cursor: pointer;
+    }
+
+    &.checked
+    {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-14v-2h14v2z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>');
+        background-color: $highlight-colour;
+        color: $light-colour;
+    }
+
+    &.added
+    {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>');
+        background-color: $highlight-colour;
+        color: $light-colour;
+    }
+}
+
+.add-box
+{
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+input.item-input
+{
+    width: 100%;
+    margin: 0;
+    padding: $padding;
+    background-color: $light-colour;
+    color: $dark-colour;
+    border: 1px solid $medium-colour;
+    border-radius: 0px 0px $corner-radius $corner-radius;
+    border-top: none;
+    box-sizing: border-box;
+
+    @include media(410px)
+    {
+        border-radius: 0;
+    }
+}
+
+button.add-item
+{
+    width: 30%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+    padding: $padding;
+    background-color: $highlight-colour;
+    color: $light-colour;
+    border-radius: 0px 0px $corner-radius 0px;
+    border-bottom: solid 1px $medium-colour;
+    border-right: solid 1px $medium-colour;
+    border-left: solid 1px $medium-colour;
+    border-top: none;
+    box-sizing: border-box;
+
+    &::-moz-focus-inner
+    {
+        border: 0; 
+        outline: 0;
+        padding: 0; 
+    }
+
+    @include media(410px)
+    {
+        width: 100%;
+        max-width: none;
+        position: relative;
+    }
+}

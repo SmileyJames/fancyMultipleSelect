@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="jquery.searchMultipleSelect.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <style>
+            *, *:before, *:after {
+                font-size: 1.05em;
+                font-weight: 300;
+                font-family: "Open Sans";
+            }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("select[multiple]").fancyMultipleSelect(); 
+            });
+        </script>
+    </head>
+    <body>
+        <select multiple="true">
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+            <option>Option 4</option>
+            <option>Option 5</option>
+        </select>
+    <body>
+</html>
