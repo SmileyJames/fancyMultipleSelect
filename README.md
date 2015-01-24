@@ -3,8 +3,8 @@ Fancy multiple select turns multiple selects into an easy to style alternative. 
 ## Dependancies
 ```
 <script src="jquery.min.js"></script>
-<script src="jquery.searchMultipleSelect.min.js"></script>
-<link rel="stylesheet" type="text/css" href="searchMultipleSelect.min.css"></link>
+<script src="jquery.fancyMultipleSelect.min.js"></script>
+<link rel="stylesheet" type="text/css" href="fancyMultipleSelect.min.css"></link>
 ```
 ## HTML
 It's simple, just use a normal multiple select.
@@ -22,4 +22,4 @@ Call the fancyMultipleSelect function on a jQuery object of selects you want to 
 $("select[multiple]").fancyMultipleSearch();
 ```
 ### And it should turn out like this:
-![image](fancy.png)
+![Fancy Multiple Select](http://smileyjames.github.io/fancyMultipleSelect/fancy.png)
