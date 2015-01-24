@@ -1,5 +1,8 @@
 # Fancy Multiple Select
 Fancy multiple select turns multiple selects into an easy to style alternative. Fancy multiple select has the ability to search and the ability to add new options.
+
+[Demo](http://smileyjames.github.io/fancyMultipleSelect/)
+
 ## Dependancies
 ```
 <script src="jquery.min.js"></script>
