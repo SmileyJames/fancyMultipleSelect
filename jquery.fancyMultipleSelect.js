@@ -126,7 +126,7 @@
                 //Add item to top and scroll there.
                 itemHolder.prepend(newItem);
                 newItem.data("order", -1);
-                sortItemsAlphebetically();
+                orderItems();
                 //Scroll itemHolder to the top
                 itemHolder.animate({ scrollTop: 0 });
                 itemInput.val("");
