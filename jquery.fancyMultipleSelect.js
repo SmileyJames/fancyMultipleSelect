@@ -1,9 +1,3 @@
-/*
-    TODO:
-        - Add a detailed README.md
-        - Upload to GitHub
-        - Add LICENCE
-*/
 (function ( $ ) {
     $.fn.fancyMultipleSelect = function() {
         /*
