@@ -4,7 +4,6 @@ Fancy multiple select turns multiple selects into an easy to style alternative. 
 ![Fancy Multiple Select](http://smileyjames.github.io/fancyMultipleSelect/fancy.png)
 
 [Demo](http://smileyjames.github.io/fancyMultipleSelect/)
-[Demo](fancyMultipleSelect)
 
 ## Dependancies
 ```HTML
